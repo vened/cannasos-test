@@ -1,0 +1,13 @@
+{
+  "libs": "./spa/libs",
+  "less": "./spa/css",
+  "css": "./spa/css/base.less",
+  "js": "./spa/js",
+  "build": {
+    "build_path": "build",
+    "css": "./build/css",
+    "js": "./build/js",
+    "libs": "./build/libs"
+  },
+  "config_path": "./node_config/config.json"
+}
