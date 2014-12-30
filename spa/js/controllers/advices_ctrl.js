@@ -1,12 +1,10 @@
 appControllers
 
-    .controller("AdvicesCtrl", function ($scope, $location, AdvicesResolve, StrainResolve) {
+    .controller("AdvicesCtrl", function ($scope, AdvicesResolve) {
         $scope.advices = AdvicesResolve.data;
-        $scope.strains = StrainResolve;
     })
 
-    .controller("AdvicesShowCtrl", function ($scope, Advice, StrainResolve) {
+    .controller("AdvicesShowCtrl", function ($scope, Advice) {
         $scope.advice = Advice.data[0];
-        $scope.strains = StrainResolve;
     });
 

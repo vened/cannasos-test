@@ -1,20 +1,18 @@
-<div class="row">
-	<div class="col-md-1">
-		<h2>Advices</h2>
-		<ul>
-			<li ng-repeat="advice in advices">
-				<a ng-href="#/advice/{{ advice._id }}">{{ advice.title }}</a>
-			</li>
-		</ul>
-	</div>
-	<div class="col-md-2">
-		<h1>Strains</h1>
-		<ul>
-			<li ng-repeat="strain in strains">
-				{{ strain.title }}
-			</li>
-		</ul>
-	</div>
-</div>
+<table>
+	<thead>
+	<tr>
+		<th>Advices</th>
+		<th>Strains</th>
+		<th>StrainCategories</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="advice in advices">
+		<td class="td-1"><a ng-href="#/advice/{{ advice._id }}">{{ advice.title }}</a></td>
+		<td class="td-2">{{ advice.strain[0].title }}</td>
+		<td class="td-3">{{ advice.strain[0].category.title }}</td>
+	</tr>
+	</tbody>
+</table>
 
-<paging page="1" pages-count="4" per-pages="5"></paging>
+<paging page="1" pages-count="11" per-pages="5"></paging>
